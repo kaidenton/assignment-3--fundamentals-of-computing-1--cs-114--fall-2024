@@ -16,5 +16,15 @@ public class RunMatrix {
     System.out.println("\tPrinting matrix with default values:");
 
     int[][] table = new int[userInput][userInput];
+    Matrix myMatrix = new Matrix();
+
+    myMatrix.printMatrix(table);
+
+    System.out.println(" ");
+    System.out.println("\tPopulating matrix...matrix populated");
+    System.out.println(" ");
+    System.out.println("\tPrinting matrix:");
+
+    myMatrix.populateMatrix(table);
   }
 }
