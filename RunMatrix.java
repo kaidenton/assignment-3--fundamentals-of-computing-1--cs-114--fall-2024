@@ -12,5 +12,9 @@ public class RunMatrix {
 
     System.out.println(" ");
     System.out.println("\tYour matrix is " + userInput + " x " + userInput);
+    System.out.println(" ");
+    System.out.println("\tPrinting matrix with default values:");
+
+    int[][] table = new int[userInput][userInput];
   }
 }
