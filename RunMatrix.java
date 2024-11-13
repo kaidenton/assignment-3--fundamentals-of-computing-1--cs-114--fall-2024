@@ -26,5 +26,13 @@ public class RunMatrix {
     System.out.println("\tPrinting matrix:");
 
     myMatrix.populateMatrix(table);
+
+    System.out.println(" ");
+    System.out.println("\tFlipping matrix...matrix flipped");
+    System.out.println(" ");
+    System.out.println("\tPrinting flipped matrix:");
+
+    myMatrix.flipMatrix(table);
+    myMatrix.printMatrix(table);
   }
 }
