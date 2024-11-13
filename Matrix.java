@@ -1,6 +1,6 @@
 public class Matrix {
     void printMatrix(int[][] table) {
-        final String ANSI_RESET = "\u001B[37m";
+        final String ANSI_RESET = "\u001B[0m";
         final String ANSI_YELLOW = "\u001B[33m";
 
         for(int row = 0; row < table.length; row++) {
@@ -19,8 +19,8 @@ public class Matrix {
 
     void populateMatrix(int[][] table) {
         int value = 1;
-        //ANSI_RESET will make the font color white
-        final String ANSI_RESET = "\u001B[37m";
+        //ANSI_RESET will make the font color the default color
+        final String ANSI_RESET = "\u001B[0m";
         //ANSI_YELLOW will make the font color yellow
         final String ANSI_YELLOW = "\u001B[33m";
         //Gives all the numbers their corresponding numbers
@@ -45,13 +45,12 @@ public class Matrix {
     }
 
     void flipMatrix(int[][] table) {
-      //Made this integer to make code more easier to read
-      int length = table.length;
-
-      for(int i = 0; i < length / 2; i++) {
-        int temp = table[i][length - i - 1];
-        table[i][length - i - 1] = table[length - i - 1][i];
-        table[length - i - 1][i] = temp;
+      for(int num = 0; num < table.length / 2; num++) {
+        //There are "-1's" because arrays start at 0, so the max number
+        //would be 1 less of the table's length
+        int temp = table[num][table.length - num - 1];
+        table[num][table.length - num - 1] = table[table.length - num - 1][num];
+        table[table.length - num - 1][num] = temp;
       }
     }
 }
